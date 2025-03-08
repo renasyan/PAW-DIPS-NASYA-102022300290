@@ -3,6 +3,7 @@
 $nama = $email = $nim = "";
 $namaErr = $emailErr = $nimErr = "";
 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     // **********************  1  **************************  
     // Tangkap nilai nama yang ada pada form HTML
     // silakan taruh kode kalian di bawah
@@ -17,22 +18,22 @@ $namaErr = $emailErr = $nimErr = "";
     // silakan taruh kode kalian di bawah
     $email = $_POST['email'];
     if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-    } else {
-        $email = test_input($_POST["email"]);
-        // check if e-mail address is well-formed
+        $emailErr = "Email perlu diisi";
+    } else {    
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid email format";
+        $emailErr = "Mohon masukan email yang valid";
         }
     }
     // **********************  3  **************************  
     // Pastikan NIM terisi dan  angka
     // silakan taruh kode kalian di bawah
-    $nama = $_POST['nama'];
-    if(empty($nama)){
-        $namaErr = "Nama perlu diisi";
+    $nim = $_POST['nim'];
+    if(empty($nim)){
+        $nimErr = "NIM perlu diisi";
+    }elseif(!is_numeric($nim)){
+        $nimErr = "NIM harus berupa angka";
     }
-    
+}  
     
 ?>
 
@@ -71,6 +72,11 @@ $namaErr = $emailErr = $nimErr = "";
                  <label>Nama</label>
                  <input type="text" id="nama" name="nama" value="<?php echo $nama; ?>">
                  <!-- Tampilkan pesan error jika variabel $namaErr tidak kosong -->
+                <?php if($namaErr) {?>
+                    <div class="error">
+                        <?php echo "*", $namaErr?>
+                    </div>
+                <?php } ?>
                 </div>
                 
                 <div class="form-group">
@@ -78,6 +84,11 @@ $namaErr = $emailErr = $nimErr = "";
                 <label>Email</label>
                 <input type="text" id="email" name="email" value="<?php echo $email; ?>">
                 <!-- Tampilkan pesan error jika variabel $emailErr tidak kosong -->
+                <?php if($emailErr) {?>
+                    <div class="error">
+                        <?php echo "*", $emailErr?>
+                    </div>
+                <?php } ?>
             </div>
             
             <div class="form-group">
@@ -85,6 +96,11 @@ $namaErr = $emailErr = $nimErr = "";
                 <label>NIM</label>
                 <input type="text" id="nim" name="nim" value="<?php echo $nim; ?>">
                 <!-- Tampilkan pesan error jika variabel $nimErr tidak kosong -->
+                <?php if($nimErr) {?>
+                    <div class="error">
+                        <?php echo "*", $nimErr?>
+                    </div>
+                <?php } ?>
             </div>
 
             <div class="button-container">
