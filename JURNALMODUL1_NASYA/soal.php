@@ -155,11 +155,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </thead>
                 <tbody>
                     <tr>
-                        <th><?php echo $nama;?></th>
-                        <th><?php echo $email;?></th>
-                        <th><?php echo $nim;?></th>
-                        <th><?php echo $jurusan;?></th>
-                        <th><?php echo $fakultas;?></th>
+                        <td><?php echo $nama;?></td>
+                        <td><?php echo $email;?></td>
+                        <td><?php echo $nim;?></td>
+                        <td><?php echo $jurusan;?></td>
+                        <td><?php echo $fakultas;?></td>
                     </tr>
                 </tbody>
             </table>
