@@ -22,9 +22,6 @@ if ($search = isset($_GET['search'])? $_GET['search'] : '') {
 
 }
 
-
-
-
 // (4.) Buat query untuk menampilkan data (Hint : gunakan query SELECT)
 $query = "SELECT * FROM tb_buku WHERE judul LIKE '%$search%'";
 
