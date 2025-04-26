@@ -28,9 +28,9 @@
                 
                 {{-- 1. tampilkan data user --}}
                 <td style="padding: 12px;">{{ $loop->iteration }}</td>
-                <td style="padding: 12px;">{{  }}</td>
-                <td style="padding: 12px;">{{  }}</td>
-                <td style="padding: 12px;">{{  }}</td>
+                <td style="padding: 12px;">{{ $user->name }}</td>
+                <td style="padding: 12px;">{{ $user->email }}</td>
+                <td style="padding: 12px;">{{ $user->phone }}</td>
                 <td style="padding: 12px;">
                     <a href="{{ route('users.edit', $user->id) }}" style="padding: 8px 16px; font-size: 14px; border-radius: 5px; background-color: #ffa500; color: white; border: none; cursor: pointer; text-decoration: none; transition: background-color 0.3s ease;">Edit</a>
                     <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">

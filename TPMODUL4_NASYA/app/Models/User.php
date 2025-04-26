@@ -13,7 +13,7 @@ class User extends Authenticatable
     // 1. Tambahkan kolom 'name', 'email' dan 'phone' pada tabel yang boleh diisi
     protected $fillable = [
         // isi disini
-        
+        'name', 'email', 'phone'
         
     ];
 
