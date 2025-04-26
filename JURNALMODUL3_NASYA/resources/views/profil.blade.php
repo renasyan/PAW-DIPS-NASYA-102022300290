@@ -23,7 +23,7 @@
                         NAMA
                     </th>
                     <td>
-                        {{$mahasiswa['nama']}}
+                        {{$mahasiswa->nama}}
                     </td>
                 </tr>
                 <tr>
@@ -31,7 +31,7 @@
                         NIM
                     </th>
                     <td>
-                        {{$mahasiswa['nim']}}
+                        {{$mahasiswa->nim}}
                     </td>
                 </tr>
                 <tr>
@@ -39,7 +39,7 @@
                         EMAIL
                     </th>
                     <td>
-                        {{$mahasiswa['email']}}
+                        {{$mahasiswa->email}}
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +47,7 @@
                         JURUSAN
                     </th>
                     <td>
-                        {{$mahasiswa['jurusan']}}
+                        {{$mahasiswa->jurusan}}
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +55,7 @@
                         FAKULTAS
                     </th>
                     <td>
-                        {{$mahasiswa['fakultas']}}
+                        {{$mahasiswa->fakultas}}
                     </td>
                 </tr>
         </table>

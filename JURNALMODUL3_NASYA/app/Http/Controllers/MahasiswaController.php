@@ -11,7 +11,7 @@ class MahasiswaController extends Controller
         // ==================2==================
         // - Buat object mahasiswa dengan data dummy (nama, nim, email, jurusan, fakultas, foto)
         // - Kirim object tersebut ke view 'profil'
-        $mahasiswa = [
+        $mahasiswa = (object)[
             'nama' => "Renasya Cahyha Handayani",
             'nim' => "102022300290",
             'email' => "renachyanii@student.telkomuniversity.ac.id",
