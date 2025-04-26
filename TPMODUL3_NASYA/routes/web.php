@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ==================1==================
+// Tambahkan route GET ke /dashboard yang memanggil method index() dari DashboardController
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
